@@ -1,0 +1,1 @@
+export const TURNOS = { 1: '🔵', 2: '🔴' }
