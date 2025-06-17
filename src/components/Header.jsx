@@ -1,9 +1,16 @@
 export const Header = ({}) => {
   return (
-    <header>
-    <div className='title'>4 en Raya</div>
-    <div className='score'>
-      🔵 scorePlayer1 - scorePlayer2 🔴
+  <header>
+    <h1>4 EN RAYA</h1>
+    <div className="marcador">
+      <div>
+        <h2>Jugador 1:</h2>
+        <p>0</p>
+      </div>
+      <div>
+        <h2>Jugador 2:</h2>
+        <p>0</p>
+      </div>
     </div>
   </header>
   )

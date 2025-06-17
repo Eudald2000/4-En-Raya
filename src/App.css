@@ -13,34 +13,62 @@ html, body {
 
 header {
   height: 15vh;
+  background: linear-gradient(90deg, #1e3a5c 60%, #3b5998 100%);
+  color: #fff;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  background: #1e3a5c;
-  color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(30,58,92,0.08);
+  padding: 16px 0;
 }
 
-.title{
-  font-size: 2rem;
-  font-weight: bold;
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
   letter-spacing: 2px;
+  font-weight: bold;
+  text-shadow: 1px 2px 8px rgba(0,0,0,0.08);
 }
 
-.score{
-  background: #fff;
-  color: #1e3a5c;
-  border-radius: 8px;
-  padding: 8px 24px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+.marcador {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  gap: 4rem;
 }
+
+.marcador h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.marcador p {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffe066;
+  text-shadow: 1px 1px 4px rgba(30,58,92,0.15);
+}
+
+.marcador div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255,255,255,0.08);
+  padding: 8px 24px;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(30,58,92,0.05);
+}
+
 main {
   width: 90vw;
-  height: 85vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,7 +79,7 @@ main {
   flex-direction: column;
   gap: 8px;
   padding: 24px;
-  background: #1e3a5c;
+   background: linear-gradient(90deg, #1e3a5c 60%, #3b5998 100%);
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   margin: 0 auto;
