@@ -13,6 +13,7 @@ export const Tablero = ({ tablero, ganador, turno, setTablero, setTurno, setGana
 
     comrobarGanador(nuevoTablero, rowIndex, colIndex)
     setTurno((prev) => (prev === 1 ? 2 : 1))
+    console.log(nuevoTablero.flat(Infinity))
   }
 
   function comrobarGanador (tablero, rowIndex, colIndex) {
@@ -20,6 +21,17 @@ export const Tablero = ({ tablero, ganador, turno, setTablero, setTurno, setGana
     comprobarHorizontal(tablero, rowIndex, colIndex)
     comprobarDiagonal_1(tablero, rowIndex, colIndex)
     comprobarDiagonal_2(tablero, rowIndex, colIndex)
+    tableroLleno(tablero)
+  }
+
+  // TABLERO LLENO
+  function tableroLleno (tablero) {
+    const tableroPlano = tablero.flat(Infinity)
+
+    if (tableroPlano.every(cell => cell != null)) {
+      const noWiner = 'empate'
+      setGanador(noWiner)
+    }
   }
 
   // COMPRUEBA VERTICAL
