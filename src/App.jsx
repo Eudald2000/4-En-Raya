@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import { Header } from './components/Header'
 import { Tablero } from './components/Tablero'
+import { ModalWinner } from './components/ModalWinner'
 
 function App () {
   const [tablero, setTablero] = useState(
@@ -22,9 +23,26 @@ function App () {
     }
   }, [ganador])
 
+  function revancha () {
+    setTablero(Array(7)
+      .fill(null)
+      .map(() => Array(8).fill(null)))
+    setTurnoActual(1)
+    setGanador(null)
+  }
+  function newGame () {
+    setTablero(Array(7)
+      .fill(null)
+      .map(() => Array(8).fill(null)))
+    setTurnoActual(1)
+    setGanador(null)
+    setMarcadorJ1(0)
+    setMarcadorJ2(0)
+  }
+
   return (
     <>
-      <Header J1={marcadorJ1} J2={marcadorJ2} />
+      <Header J1={marcadorJ1} J2={marcadorJ2} revancha={revancha} newgame={newGame}/>
       <main>
         <Tablero
         turno={turnoActual}
@@ -34,6 +52,9 @@ function App () {
         tablero={tablero}
         setTablero={setTablero}
         />
+        {
+          ganador ? <ModalWinner revancha={revancha} newgame={newGame} ganador={ganador}/> : ''
+        }
       </main>
     </>
   )
