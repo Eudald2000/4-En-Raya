@@ -30,7 +30,6 @@ function App () {
     setTablero(Array(7)
       .fill(null)
       .map(() => Array(8).fill(null)))
-    setTurnoActual(1)
     setGanador()
   }
   function newGame () {
